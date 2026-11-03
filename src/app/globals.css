@@ -1,0 +1,35 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: light;
+  --page: #f7f8f4;
+  --ink: #1d2a24;
+}
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  background: var(--page);
+  color: var(--ink);
+  font-family: Arial, Helvetica, sans-serif;
+}
+button, input, textarea, select { font: inherit; }
+::selection { background: #cde8d4; color: #153d2b; }
+.arabic {
+  direction: rtl;
+  unicode-bidi: plaintext;
+  font-family: "Noto Naskh Arabic", "Amiri", "Traditional Arabic", "Tahoma", serif;
+  line-height: 2;
+}
+.surface-grid {
+  background-image: radial-gradient(rgba(35, 122, 73, .10) 1px, transparent 1px);
+  background-size: 18px 18px;
+}
+
+@layer components {
+  .form-input {
+    @apply mt-2 w-full rounded-xl border border-slate-200 bg-white px-4 py-3 text-sm font-normal text-slate-800 outline-none transition placeholder:text-slate-400 focus:border-brand-500 focus:ring-4 focus:ring-brand-50;
+  }
+}
