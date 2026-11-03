@@ -63,7 +63,8 @@ export async function createQuestionAction(formData: FormData) {
     await supabase.from("questions").delete().eq("id", question.id);
     redirect(`/admin?error=${encodeURIComponent(optionsError?.message || "Gagal menyimpan pilihan")}`);
   }
-  const correctOption = insertedOptions.find((option: any) => option.label === correctLabel);
+  const optionRows = insertedOptions as Array<{ id: string; label: string }>;
+  const correctOption = optionRows.find((option) => option.label === correctLabel);
   const { error: keyError } = await supabase.from("question_answer_keys").insert({
     question_id: question.id, correct_option_id: correctOption?.id, explanation,
   });

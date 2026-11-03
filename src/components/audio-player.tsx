@@ -69,7 +69,7 @@ export default function AudioPlayer({ text, locale = "ar-SA", speechRate = 0.85 
   return (
     <section className="rounded-3xl border border-brand-100 bg-gradient-to-br from-brand-50 to-white p-5 sm:p-6">
       <div className="flex items-start justify-between gap-3">
-        <div><div className="flex items-center gap-2 text-sm font-extrabold text-brand-800"><Headphones size={17} /> AUDIO ISTIMĀ'</div><p className="mt-1 text-sm text-slate-500">Dengarkan dialog dengan saksama.</p></div>
+        <div><div className="flex items-center gap-2 text-sm font-extrabold text-brand-800"><Headphones size={17} /> AUDIO ISTIMĀ&apos;</div><p className="mt-1 text-sm text-slate-500">Dengarkan dialog dengan saksama.</p></div>
         <span className="rounded-xl bg-white p-2.5 text-brand-700 shadow-sm"><Volume2 size={20} /></span>
       </div>
       <div className="mt-5 flex flex-wrap items-center justify-center gap-3">
